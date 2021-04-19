@@ -5,13 +5,11 @@ import HalamanUserList from '../../molecules/UserListMolecules';
 
 const UserListHalaman = () => {
   const [users, setUsers] = useState([]);
-
-  useEffect(() => {
+       UseEffect(() => {
     Axios.get('http://10.0.2.2:3005/users').then(result => {
       setUsers(result.data);
     });
   }, [users]);
-
   console.log(users);
   return (
     <View style={styles.container}>
@@ -29,9 +27,7 @@ const UserListHalaman = () => {
     </View>
   );
 };
-
 export default UserListHalaman;
-
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 15,
