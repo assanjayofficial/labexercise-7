@@ -4,13 +4,11 @@ import Input from '../../atoms/Input';
 import Gap from './../../atoms/Gap';
 import Button from '../../atoms/Button';
 import Axios from 'axios';
-
 const App = () => {
   const [first_name, setFirstName] = useState('');
   const [last_name, setLastName] = useState('');
   const [email, setEmail] = useState('');
-
-  const handleSubmit = () => {
+   const handleSubmit = () => {
     const data = {
       email: email,
       first_name: first_name,
@@ -19,8 +17,7 @@ const App = () => {
     };
     Axios.post('http://10.0.2.2:3005/users', data);
   };
-
-  return (
+   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.Regis}>Registration Page</Text>
@@ -49,8 +46,10 @@ const App = () => {
     </View>
   );
 };
-
 export default App;
+
+
+
 
 const styles = StyleSheet.create({
   container: {
