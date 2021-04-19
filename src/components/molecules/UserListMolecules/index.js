@@ -4,17 +4,15 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 const UserList = ({email, avatar, fullName}) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.avatar} source={{uri: `${avatar}`}} />
-      <Text style={styles.listData}>
+      <Image style={styles.avatar} source={{uri: `${avatar}`}}/><Text style={styles.listData}>
         Email :<Text style={styles.normal}> {email}</Text>
       </Text>
       <Text style={styles.listData}>
-        Full Name :<Text style={styles.normal}> {fullName}</Text>
+        Full Name :<Text style={styles.normal}>{fullName}</Text>
       </Text>
     </View>
   );
 };
-
 export default UserList;
 
 const styles = StyleSheet.create({
@@ -28,11 +26,11 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   Label: {
-    fontSize: 36,
+    fontSize: 33,
     fontWeight: '700',
   },
   listData: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   normal: {
