@@ -1,14 +1,11 @@
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
-
 const IndexButton = ({label, onSbumit}) => {
   return (
     <TouchableOpacity onPress={onSbumit} style={styles.button}>
-      <Text style={styles.labelButton}>{label}</Text>
-    </TouchableOpacity>
+    <Text style={styles.labelButton}>{label}</Text></TouchableOpacity>
   );
 };
-
 export default IndexButton;
 
 const styles = StyleSheet.create({
